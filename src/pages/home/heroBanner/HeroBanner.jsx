@@ -49,7 +49,7 @@ const HeroBanner = () => {
               onChange={(event) => setQuery(event.target.value)}
               onKeyUp={handleQuery}
             />
-            <button>Search</button>
+            <button className="button">Search</button>
           </div>
         </div>
       </ContentWrapper>
