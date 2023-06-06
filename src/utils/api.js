@@ -9,7 +9,7 @@ const headers = {
 
 export const fetchDataFromApi = async (url, params) => {
     try {
-        const { data } = axios.get(`${BASE_URL}${url}`, {
+        const { data } = await axios.get(`${BASE_URL}${url}`, {
             headers,
             params
         })

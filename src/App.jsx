@@ -5,19 +5,19 @@ import { getApiConfiguration } from "./store/homeSlice";
 
 function App() {
   const dispatch = useDispatch();
-  const url = useSelector((state) => state.url);
+
   useEffect(() => {
-    testDataFetch();
+    apiTesting();
   }, []);
 
-  const testDataFetch = () => {
+  const apiTesting = () => {
     fetchDataFromApi("/movie/popular").then((res) => {
       console.log(res);
       dispatch(getApiConfiguration(res));
     });
   };
 
-  return <div className="App">App {url?.total_pages}</div>;
+  return <div className="App">App</div>;
 }
 
 export default App;
