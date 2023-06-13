@@ -1,4 +1,14 @@
 @import "../../mixins.scss";
+.logoTitle {
+  display: flex;
+  align-items: center;
+  .titleCase {
+    font-size: 24px;
+    color: white;
+    margin-left: 10px;
+    font-weight: 700;
+  }
+}
 .header {
   position: fixed;
   transform: translateY(0);

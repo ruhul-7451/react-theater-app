@@ -74,8 +74,11 @@ const Header = () => {
   return (
     <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
       <ContentWrapper>
-        <div className="logo">
-          <img src={logo} alt="" />
+        <div className="logoTitle" onClick={() => navigate("/")}>
+          <div className="logo">
+            <img src={logo} alt="" />
+          </div>
+          <p className="titleCase">Theater</p>
         </div>
         <ul className="menuItems">
           <li
