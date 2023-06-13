@@ -45,7 +45,7 @@ const DetailsBanner = ({ video, crew }) => {
                     {data.poster_path ? (
                       <Img
                         className="posterImg"
-                        src={url.backdrop + data.poster_path}
+                        src={url.backdrop + data?.poster_path}
                       />
                     ) : (
                       <Img className="posterImg" src={PosterFallback} />
@@ -67,20 +67,20 @@ const DetailsBanner = ({ video, crew }) => {
 
                     <div className="overview">
                       <div className="heading">Overview</div>
-                      <div className="description">{data.overview}</div>
+                      <div className="description">{data?.overview}</div>
                     </div>
                     <div className="info">
                       {data.status && (
                         <div className="infoItem">
                           <span className="text bold">Status: </span>
-                          <span className="text">{data.status}</span>
+                          <span className="text">{data?.status}</span>
                         </div>
                       )}
                       {data.release_date && (
                         <div className="infoItem">
                           <span className="text bold">Release Date: </span>
                           <span className="text">
-                            {dayjs(data.release_date).format("MMM D, YYYY")}
+                            {dayjs(data?.release_date).format("MMM D, YYYY")}
                           </span>
                         </div>
                       )}
@@ -88,7 +88,7 @@ const DetailsBanner = ({ video, crew }) => {
                         <div className="infoItem">
                           <span className="text bold">Runtime: </span>
                           <span className="text">
-                            {toHoursAndMinutes(data.runtime)}
+                            {toHoursAndMinutes(data?.runtime)}
                           </span>
                         </div>
                       )}
