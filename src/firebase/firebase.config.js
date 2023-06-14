@@ -1,1 +1,0 @@
-// upcoming auth pages firebase config
